@@ -1,9 +1,5 @@
 package br.sc.senac.mcap.view;
 
-import br.sc.senac.mcap.view.Tela_Cadastro_Cliente;
-import br.sc.senac.mcap.view.Tela_Pesquisa;
-import br.sc.senac.mcap.view.Tela_principal;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -57,7 +53,7 @@ public class Systemview extends JFrame {
         testarItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Tela_Cadastro_Cliente();
+                new ClienteView();
                 dispose();
             }
         });
