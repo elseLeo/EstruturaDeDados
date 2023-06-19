@@ -32,4 +32,3 @@ public class ClienteController extends Dao<Cliente> {
             return null;
         }
     }
-}
