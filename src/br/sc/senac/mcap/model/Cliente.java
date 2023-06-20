@@ -12,10 +12,12 @@ public class Cliente {
     private String endereco;
 
     public Integer getCodigo() {
+
         return codigo;
     }
 
     public void setCodigo(Integer codigo) {
+
         this.codigo = codigo;
     }
 
