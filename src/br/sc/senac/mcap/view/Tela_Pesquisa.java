@@ -4,6 +4,8 @@ import br.sc.senac.mcap.util.ConnectionFactory;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
 import java.awt.event.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -101,12 +103,27 @@ public class Tela_Pesquisa extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 model = (DefaultTableModel) tblCliente.getModel();
 
+                TableRowSorter sorter = new TableRowSorter<TableModel>(model);
+                tblCliente.setRowSorter(sorter);
+
+                String nome = txtPesquisaNome.getText();
+                if(nome != null){
+                    sorter.setRowFilter(RowFilter.regexFilter("(?i)" + nome));
+                }else{
+                    sorter.setRowFilter(null);
+                }
             }
         });
         btnPesquisar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+            }
+        });
+        btnLimpar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                txtPesquisaNome.setText("");
             }
         });
     }

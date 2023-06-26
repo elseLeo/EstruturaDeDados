@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Exemplo_estrutura_de_dados:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Exemplo_estrutura_de_dados_jar</output-path>
+    <root id="archive" name="Exemplo_estrutura_de_dados.jar">
+      <element id="module-output" name="Exemplo_estrutura_de_dados" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../JDBC/mysql-connector-j-8.0.31.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
